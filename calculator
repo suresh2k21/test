@@ -11,6 +11,9 @@ function calculate(num1, operator, num2) {
                 return "Cannot divide by zero";
             }
             return num1 / num2;
+
+        case '^':
+            return Math.pow(num1, num2);
         default:
             return "Invalid operator";
     }
@@ -21,3 +24,5 @@ console.log(calculate(10, '+', 5)); // 15
 console.log(calculate(10, '-', 5)); // 5
 console.log(calculate(10, '*', 5)); // 50
 console.log(calculate(10, '/', 5)); // 2
+console.log(calculate(10, '/', 0)); // "Cannot divide by zero"
+console.log(calculate(2, '^', 3)); // 8
